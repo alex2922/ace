@@ -1,0 +1,50 @@
+.header{
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    .container{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            img{
+                height: 50px;
+            }
+        }
+
+        .links{
+            padding: 20px 10px;
+            overflow: hidden;
+
+            a:not(.btn){
+                padding: 10px 20px;
+                transition: var(--trans);
+                position: relative;
+                overflow: hidden;
+                &::after{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 75%;
+                    height: 3px;
+                    background: var(--accent-yellow);
+                    bottom: 0px;
+                    left: -150%;
+                    transform: translateX(-50%);
+                    transition: var(--trans);
+                    opacity: 0;
+                    border-radius: 10px;
+                }
+                &:hover{
+                    color: var(--accent-yellow);
+                    &::after{
+                        left: 50%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

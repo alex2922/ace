@@ -1,0 +1,52 @@
+.hero {
+    height: calc(100dvh - 150px);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+
+        .btn {
+            margin-top: 30px;
+        }
+
+    }
+}
+
+
+.imgbox-wrapper {
+    height: 100dvh;
+
+    .container {
+        .imgbox {
+            padding: 20px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            animation: rotate-in 3s ease-in-out infinite ;
+
+            @keyframes rotate-in {
+                0% , 100% {
+                    transform: translateY(-40px);
+                }
+
+                50% {
+                    transform: translateY(0px);
+
+                }
+
+            }
+
+
+            .img-screen {
+                aspect-ratio: 16/9;
+                width: 100%;
+                background: var(--white);
+                border-radius: 10px;
+                background: url("https://images.ctfassets.net/w8fc6tgspyjz/ANJFM8HigJCMUwQxflBvU/226711f57db215ba057f50f7a9b68c37/home-tabs-v4-chat-desktop.png");
+            }
+        }
+    }
+}
