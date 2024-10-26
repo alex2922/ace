@@ -5,6 +5,7 @@ import Home from './pages/home/Home';
 import Price from './pages/price/Price';
 import Contact from './pages/contact/Contact';
 import Header from './comps/header/Header';
+import WithContentEditable from './comps/content editable/WithContentEditable';
 
 
 
@@ -24,4 +25,6 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
+
+export default WithContentEditable(App);

@@ -22,6 +22,7 @@
   padding: 0px;
   font-family: "Quicksand", serif;
   font-size: calc(var(--unit));
+  // content-e
   // color: var(--white)
 
 }
@@ -112,7 +113,7 @@ h1{
 
 body {
   -ms-overflow-style: scrollbar;
-  background: linear-gradient(#cdcad3, #e5e4cf);
+  background: linear-gradient(45deg ,#cdcad3, #e5e4cf);
 
 }
 
@@ -145,4 +146,8 @@ body {
   border-radius: 10px;
   border: none;
   border: 1px solid white;
+
+  &.glow{
+    box-shadow: -10px 0px 350px white , 10px  0px 300px var(--accent-yellow);
+  }
 }

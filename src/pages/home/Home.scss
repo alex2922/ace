@@ -1,7 +1,8 @@
 .hero {
-    height: calc(100dvh - 150px);
+    height: calc(100dvh - 300px);
+    // display: none;
 
-    .container {
+    .hero-cont {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -17,9 +18,12 @@
 
 
 .imgbox-wrapper {
-    height: 100dvh;
+    height: auto;
+    padding: 50px 0px;
+    // display: none;
+    // border: 1px solid ;
 
-    .container {
+    .imgbox-cont {
         .imgbox {
             padding: 20px;
             width: 100%;
@@ -29,7 +33,7 @@
 
             @keyframes rotate-in {
                 0% , 100% {
-                    transform: translateY(-40px);
+                    transform: translateY(-60px);
                 }
 
                 50% {
@@ -46,6 +50,116 @@
                 background: var(--white);
                 border-radius: 10px;
                 background: url("https://images.ctfassets.net/w8fc6tgspyjz/ANJFM8HigJCMUwQxflBvU/226711f57db215ba057f50f7a9b68c37/home-tabs-v4-chat-desktop.png");
+            }
+        }
+    }
+}
+
+
+
+// section starts here
+
+
+
+.twocol{
+    height: 800px;
+    background: linear-gradient( 90deg, var(--white) 50%, var(--accent-yellow)50%);
+    overflow-x: hidden;
+    // display: none;
+    .twocol-cont{
+
+        display: flex;
+        
+        .left{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-right: 30px;
+            gap: 20px;
+
+            p{
+                text-align-last: left;
+            }
+        }
+        .right{
+            height: 100%;
+            width: 50%;
+            position: relative;
+
+            .img-box{
+                height: 500px;
+                aspect-ratio: 16/9;
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                padding: 20px;
+                border-radius: 20px;
+
+                .img{
+                    background: var(--white);
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: url("https://images.ctfassets.net/w8fc6tgspyjz/ANJFM8HigJCMUwQxflBvU/226711f57db215ba057f50f7a9b68c37/home-tabs-v4-chat-desktop.png");
+                }
+
+                
+            }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+.bento-parent{
+    --card-height: 300px;
+    padding: 50px 0px;
+
+
+    .bento-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+
+        .bento{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            
+            .line{
+                display: flex;
+                gap: 20px;
+
+                &:nth-child(odd){
+                    flex-direction: row-reverse;
+                }
+
+                .left{
+                    width: 40%;
+                    height:var(--card-height) ;
+                    background: var(--white);
+                    border-radius: 10px;
+                }
+                .right{
+                    width: 60%;
+                    height:var(--card-height) ;
+                    background: var(--white);
+                    border-radius: 10px;
+                }
             }
         }
     }
